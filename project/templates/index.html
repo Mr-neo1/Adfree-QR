@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate QR Code</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-image: url("/static/background.jpg"); /* Background image */
+        background-size: cover;
+        color: black;
+      }
+      h1 {
+        margin-top: 50px;
+      }
+      form {
+        background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+        padding: 20px;
+        display: inline-block;
+        border-radius: 10px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: none;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Generate QR Code</h1>
+    <p>Enter your link below to generate a QR code:</p>
+
+    <form action="/generate_qr" method="POST">
+      <input type="text" name="link" placeholder="Enter URL" required />
+      <br /><br />
+      <input type="submit" value="Generate QR" />
+    </form>
+  </body>
+</html>
